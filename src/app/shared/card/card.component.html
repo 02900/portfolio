@@ -1,0 +1,34 @@
+<div class="card" *ngIf="data">
+  <picture *ngIf="data.cover">
+    <source type="image/webp" [srcset]="data.cover + '.webp'" />
+    <img [src]="data.cover + '.jpg'" [alt]="data.title" draggable="false" />
+  </picture>
+
+  <div class="card-body">
+    <div class="card-header">
+      <h2>
+        {{ data.title }}
+      </h2>
+    </div>
+
+    <div class="card-description">
+      <p>
+        {{ data.description }}
+      </p>
+
+      <p>
+        {{ data.subtitle }}
+      </p>
+    </div>
+
+    <div class="card-links">
+      <a *ngIf="data.link" [href]="data.link.zelda">
+        {{ data.link.name }}
+      </a>
+
+      <a *ngIf="data.link_alt" [href]="data.link_alt.zelda">
+        {{ data.link_alt.name }}
+      </a>
+    </div>
+  </div>
+</div>

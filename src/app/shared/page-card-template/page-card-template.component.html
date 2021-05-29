@@ -1,0 +1,7 @@
+<section class="page-wrapper">
+  <h1 class="title">{{ title }}</h1>
+
+  <div class="card">
+    <app-card *ngFor="let project of projects" [data]="project"></app-card>
+  </div>
+</section>
