@@ -1,7 +1,7 @@
 <div class="card" *ngIf="data">
   <picture *ngIf="data.cover">
     <source type="image/webp" [srcset]="data.cover + '.webp'" />
-    <img [src]="data.cover + '.jpg'" [alt]="data.title" draggable="false" />
+    <img width="320" height="180" [src]="data.cover + '.jpg'" [alt]="data.title" draggable="false" />
   </picture>
 
   <div class="card-body">

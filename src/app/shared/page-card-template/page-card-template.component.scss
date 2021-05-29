@@ -19,10 +19,15 @@
       
       app-card {
         margin: 1rem;
+        width: 100%;
       }
 
       @media (min-width: 992px) {
         max-width: calc(100vw - 20rem);
+
+        app-card {
+          width: auto;
+        }
       }
     }
   }
