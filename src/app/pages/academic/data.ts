@@ -19,7 +19,7 @@ export const academic: IProjectData[] = [
     title: 'Processes and threads',
     subtitle: 'C',
     description:
-      'Bash aplication that lista los archivos en una ruta especificada',
+      'Study of process and thread management with a program that display files in the current directory',
     link: { name: 'View on GitHub', zelda: 'https://github.com/smirchad/CI3825-P1-CPMA' },
   },
   {
