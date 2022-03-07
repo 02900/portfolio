@@ -1,6 +1,6 @@
-import { IProjectData } from '@shared/card/card.project-data';
+import { IProject } from 'src/app/project.interface';
 
-export const frontend: IProjectData[] = [
+export const frontend: IProject[] = [
   {
     cover: '/assets/portfolio/kavak',
     title: 'KAVAK',

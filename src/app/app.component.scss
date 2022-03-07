@@ -1,11 +1,5 @@
-@import "src/assets/styles/background.scss";
-
-.glitch-wrapper {
-  @include apply-glitch;
-
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  z-index: -1;
+.site-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }

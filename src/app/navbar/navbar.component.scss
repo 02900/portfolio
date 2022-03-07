@@ -5,7 +5,7 @@
   flex-direction: column;
   margin-top: 0.5rem;
 
-  .hamburger-menu{
+  .hamburger-menu {
     margin-right: 1rem;
 
     @media (min-width: 992px) {
@@ -25,15 +25,15 @@
       margin-right: 2.4rem;
       list-style-type: none;
       a {
-        color: white;
+        color: rgb(34, 34, 34);
         font-size: 1.25rem;
         padding: 0 0.25rem;
       }
 
       &:hover {
         a {
-          color: black;
-          background: white;
+          color: rgb(16, 40, 255);
+          background: rgb(238, 238, 238);
         }
       }
     }
@@ -42,7 +42,7 @@
 
 @media (min-width: 992px) {
   .navbar {
-  align-items: flex-start;
+    align-items: flex-start;
     flex-direction: row-reverse;
     ul {
       display: flex;

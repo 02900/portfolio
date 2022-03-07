@@ -1,4 +1,4 @@
-export interface IProjectData {
+export interface IProject {
   cover?: string;
   title: string;
   subtitle: string;

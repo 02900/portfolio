@@ -3,47 +3,7 @@ body {
   margin: 0;
 }
 
-.d-flex {
-  display: flex;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.h-100 {
-  height: 100%;
-}
-
-.flex-grow-1 {
-  flex-grow: 1;
-}
-
-.px-3 {
-  padding: 0 1rem;
-}
-
-h1 {
-  font-size: 3rem;
-  margin: 0 0 2rem;
-}
-
-h2 {
-  margin: 0 0 1.4rem;
-}
-
-p {
-  margin: 0 0 1.2rem;
-}
-
-a {
-  text-decoration: none;
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
 }

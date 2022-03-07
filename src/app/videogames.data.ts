@@ -1,6 +1,6 @@
-import { IProjectData } from '@shared/card/card.project-data';
+import { IProject } from 'src/app/project.interface';
 
-export const videogames: IProjectData[] = [
+export const videogames: IProject[] = [
   {
     cover: '/assets/vg/ygo',
     title: 'Yugioh Duelist of the Roses',

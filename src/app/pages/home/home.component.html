@@ -1,15 +1,42 @@
-<div
-  class="d-flex flex-column align-items-center justify-content-center h-100 px-3"
->
-  <h1>Demo Reel</h1>
+<section class="container">
+  <div class="home">
 
-  <iframe
-    src="https://www.youtube.com/embed/NBQ8Mfu8y_c"
-    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/NBQ8Mfu8y_c?autoplay=1><img src=https://img.youtube.com/vi/NBQ8Mfu8y_c/hqdefault.jpg alt='Demo Reel'><span>▶</span></a>"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    title="Demo Reel"
-    loading="lazy"
-  ></iframe>
-</div>
+
+
+
+    <ng-container *ngFor="let project of videogames">
+      <ng-container *ngTemplateOutlet="cardTemplate; context: { card: project }"></ng-container>
+    </ng-container>
+  </div>
+</section>
+
+
+<ng-template #cardTemplate let-card="card">
+  <div class="card">
+    <picture *ngIf="card.cover">
+      <source type="image/webp" [srcset]="card.cover + '.webp'" />
+      <img width="320" height="180" [src]="card.cover + '.jpg'" [alt]="card.title" draggable="false" />
+    </picture>
+
+    <div class="card-body">
+      <div class="card-header">
+        <h2>{{ card.title }}</h2>
+      </div>
+
+      <div class="card-description">
+        <p>{{ card.description }}</p>
+        <p>{{ card.subtitle }}</p>
+      </div>
+
+      <div class="card-links">
+        <a *ngIf="card.link" [href]="card.link.zelda">
+          {{ card.link.name }}
+        </a>
+
+        <a *ngIf="card.link_alt" [href]="card.link_alt.zelda">
+          {{ card.link_alt.name }}
+        </a>
+      </div>
+    </div>
+  </div>
+</ng-template>

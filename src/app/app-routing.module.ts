@@ -6,30 +6,18 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'home',
-    component: HomeComponent
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'academic',
+    path: 'about',
     loadChildren: () =>
-      import('./pages/academic/academic.module').then(m => m.AcademicModule)
+      import('./pages/about/about.module').then((m) => m.AboutModule),
   },
-  {
-    path: 'videogames',
-    loadChildren: () =>
-      import('./pages/videogames/videogames.module').then(
-        m => m.VideogamesModule
-      )
-  },
-  {
-    path: 'frontend',
-    loadChildren: () =>
-      import('./pages/frontend/frontend.module').then(m => m.FrontendModule)
-  },
-  { path: 'about', loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

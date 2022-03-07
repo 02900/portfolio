@@ -1,6 +1,6 @@
-import { IProjectData } from '@shared/card/card.project-data';
+import { IProject } from 'src/app/project.interface';
 
-export const academic: IProjectData[] = [
+export const academic: IProject[] = [
   {
     title: 'A parse tree',
     subtitle: 'Prolog',
@@ -29,7 +29,7 @@ export const academic: IProjectData[] = [
       'Implementation of fifteen puzzle',
     link: { name: 'View on GitHub', zelda: 'https://github.com/jotaate/puzzleBMP' },
   },
-  
+
   {
     title: 'Schedule process',
     subtitle: 'C',

@@ -6,12 +6,10 @@
       </svg>
     </a>
   </div>
+
   <ul [ngClass]="{ 'active': active }" (click)="toogle()">
     <li><a routerLink="/home">Home</a></li>
     <li><a routerLink="/about">About me</a></li>
-    <li><a routerLink="/videogames">Videogames</a></li>
-    <li><a routerLink="/frontend">Frontend</a></li>
-    <li><a routerLink="/academic">Academic</a></li>
     <li><a href="https://jotaate.github.io/assets/cv.pdf" target="_blank">CV</a></li>
   </ul>
 </nav>
