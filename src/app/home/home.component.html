@@ -1,0 +1,84 @@
+<main class="container">
+  <div class="description">
+    <h1>Juan Ortiz</h1>
+    <p>
+      Welcome! Thank you for taking the time to look through my portfolio - I am
+      constantly adding new projects, features, and insights to this site as I
+      learn and grow as a programmer.
+    </p>
+  </div>
+
+  <section>
+    <div class="description">
+      <h2>Frontend Engineer</h2>
+
+      <p>
+        I enjoy working closely with teammates to build robust applications
+        which enrich user experience providing a faster, responsive and
+        consistent navigation. I’ve been working as a Frontend Engineer for
+        almost 4 years, developing applications using tools such as Angular,
+        Stencil, TypeScript, JavaScript, RxJS, Jest, HTML, SCSS and Storybook.
+        The architecture is the most interesting area for me for now and I am
+        currently learning about microfront.
+      </p>
+    </div>
+
+    <div class="content">
+      <ng-container *ngFor="let project of frontend">
+        <ng-container *ngTemplateOutlet="cardTemplate; context: { card: project }"></ng-container>
+      </ng-container>
+    </div>
+  </section>
+
+  <section>
+    <div class="description">
+      <h2>Game Developer</h2>
+
+      <p>
+        I'm entusiastic about videogames and I have been develop several
+        prototypes. I have almost 10 years of expericience using Unity Engine
+        and in the future I would like to work as Game Developer.
+      </p>
+    </div>
+
+    <div class="content">
+      <ng-container *ngFor="let project of videogames">
+        <ng-container *ngTemplateOutlet="cardTemplate; context: { card: project }"></ng-container>
+      </ng-container>
+    </div>
+  </section>
+</main>
+
+<ng-template #cardTemplate let-card="card">
+  <div class="card">
+    <div *ngIf="card.cover" class="pic-wrapper">
+      <picture>
+        <source type="image/webp" [srcset]="card.cover + '.webp'" />
+        <source type="image/jpg" [srcset]="card.cover + '.jpg'" />
+        <img width="320" height="180" [alt]="card.title" draggable="false" />
+      </picture>
+
+      <div *ngIf="card?.startDate || card?.endDate" class="date">
+        <span>{{ card?.startDate? card?.startDate + ' -' : '' }} {{ card?.endDate === -1? 'present' :
+          card?.endDate}}</span>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="card-header">
+        <h3>{{ card?.title }}</h3>
+      </div>
+
+      <div class="card-description">
+        <p>{{ card?.description }}</p>
+        <p>{{ card?.subtitle }}</p>
+      </div>
+
+      <div class="card-links">
+        <a *ngFor="let link of card?.links" [href]="link.zelda">
+          {{ link.name }}
+        </a>
+      </div>
+    </div>
+  </div>
+</ng-template>

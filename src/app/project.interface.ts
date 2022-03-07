@@ -3,8 +3,9 @@ export interface IProject {
   title: string;
   subtitle: string;
   description: string;
-  link?: ILink;
-  link_alt?: ILink;
+  links?: ILink[];
+  startDate?: number;
+  endDate?: number;
 }
 
 interface ILink {

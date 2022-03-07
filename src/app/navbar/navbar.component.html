@@ -2,14 +2,16 @@
   <div class="hamburger-menu">
     <a (click)="toogle()">
       <svg viewBox="-5 0 10 8" width="32">
-        <line y2="8" stroke="#FFF" stroke-width="10" stroke-dasharray="2 1" />
+        <line y2="8" stroke="#000" stroke-width="10" stroke-dasharray="2 1" />
       </svg>
     </a>
   </div>
 
   <ul [ngClass]="{ 'active': active }" (click)="toogle()">
-    <li><a routerLink="/home">Home</a></li>
-    <li><a routerLink="/about">About me</a></li>
+    <!-- <li><a routerLink="/home">Home</a></li> -->
+    <li><a href="https://github.com/jotaate" target="_blank">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/jotaate/" target="_blank">LinkedIn</a></li>
+    <li><a href="https://www.youtube.com/c/jotaate" target="_blank">YouTube</a></li>
     <li><a href="https://jotaate.github.io/assets/cv.pdf" target="_blank">CV</a></li>
   </ul>
 </nav>
