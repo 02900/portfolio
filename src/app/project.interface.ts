@@ -1,7 +1,7 @@
 export interface IProject {
   cover?: string;
   title: string;
-  subtitle: string;
+  stack: string;
   description: string;
   links?: ILink[];
   startDate?: number;

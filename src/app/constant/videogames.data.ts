@@ -4,7 +4,7 @@ export const videogames: IProject[] = [
   {
     cover: '/assets/vg/crowd-simulation',
     title: 'Crowd Simulation',
-    subtitle: 'Unity3D',
+    stack: 'Unity',
     description: 'Research about crowd simulation models.',
     links: [
       {
@@ -18,7 +18,7 @@ export const videogames: IProject[] = [
   {
     cover: '/assets/vg/ygo',
     title: 'Yugioh Duelist of the Roses',
-    subtitle: 'Unity3D',
+    stack: 'Unity',
     description: 'A remake based on the game Yu-Gi-Oh! Duelist of the Roses',
     links: [
       {
@@ -31,7 +31,7 @@ export const videogames: IProject[] = [
   {
     cover: '/assets/vg/caza-a-casa',
     title: 'Caza a Casa',
-    subtitle: 'Unity3D',
+    stack: 'Unity',
     description:
       'A 2D game platformer inspired by petroglyphs, figures engraved in stone thousands of years ago.',
     links: [
@@ -45,7 +45,7 @@ export const videogames: IProject[] = [
   {
     cover: '/assets/vg/goku-escape-itachi-no-jutsu',
     title: 'Goku escape Itachi no Jutsu',
-    subtitle: 'LÖVE 2D',
+    stack: 'LÖVE 2D',
     description:
       'A simple game developed in orden to learn about Lua programming language.',
     links: [
@@ -59,7 +59,7 @@ export const videogames: IProject[] = [
   {
     cover: '/assets/vg/ai4vg-3',
     title: 'States Machines',
-    subtitle: 'Unity3D',
+    stack: 'Unity',
     description:
       'Implementation of FSM to allow NPC can make decisions according to the game state.',
     links: [
@@ -73,7 +73,7 @@ export const videogames: IProject[] = [
   {
     cover: '/assets/vg/ai4vg-2',
     title: 'Navigation Mesh',
-    subtitle: 'Unity3D',
+    stack: 'Unity',
     description:
       'Automatic generation of navmesh voxel based from scratch and integration with A* algorithm.',
     links: [
@@ -87,7 +87,7 @@ export const videogames: IProject[] = [
   {
     cover: '/assets/vg/ai4vg-1',
     title: 'Steering Behaviors',
-    subtitle: 'Unity3D',
+    stack: 'Unity',
     description:
       'Interesting movement algorithms based on steering behavior principles.',
     links: [
@@ -101,7 +101,7 @@ export const videogames: IProject[] = [
   {
     cover: '/assets/vg/tps',
     title: 'TPS Protopyte',
-    subtitle: 'Unity3D',
+    stack: 'Unity',
     description:
       'A template to third person shooter with include player controller, enemies, policies, vehicles and wanted system and more.',
     links: [
@@ -115,7 +115,7 @@ export const videogames: IProject[] = [
   {
     cover: '/assets/vg/first-game-1',
     title: 'TPS Sandbox Prototype',
-    subtitle: 'Unity3D',
+    stack: 'Unity',
     description:
       'In my introduction to game development, I made a large-scale prototype of a third person open world game over a period of 1 year.',
     links: [
