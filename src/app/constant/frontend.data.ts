@@ -10,7 +10,7 @@ export const frontend: IProject[] = [
     links: [
       {
         name: 'Repository',
-        zelda: 'https://github.com/jotaate/screenshot-chrome-extension',
+        zelda: 'https://github.com/02900/screenshot-chrome-extension',
       },
     ],
     endDate: 2022,
@@ -22,8 +22,8 @@ export const frontend: IProject[] = [
     description:
       'Simple application to show concepts about reactive programming and good practices in Angular',
     links: [
-      { name: 'Repository', zelda: 'https://github.com/jotaate/deck-builder' },
-      { name: 'Demo', zelda: 'https://jotaate.github.io/ygo-deck-builder/' },
+      { name: 'Repository', zelda: 'https://github.com/02900/deck-builder' },
+      { name: 'Demo', zelda: 'https://02900.github.io/ygo-deck-builder/' },
     ],
     endDate: 2022,
   },
