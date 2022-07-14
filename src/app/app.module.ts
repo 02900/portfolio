@@ -9,7 +9,7 @@ import { NavbarModule } from './navbar/navbar.module';
     AppComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NavbarModule,
   ],
