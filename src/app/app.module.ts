@@ -12,8 +12,7 @@ import { NavbarModule } from './navbar/navbar.module';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NavbarModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+  ]
+  , bootstrap: [AppComponent],
 })
 export class AppModule { }
