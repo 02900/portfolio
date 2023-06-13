@@ -1,12 +1,24 @@
 import { IProject } from 'src/app/project.interface';
 
+export const parcelamientoImages = [
+  '/assets/parcelamiento/479-KISTAPUR-1B-2.jpg',
+  '/assets/parcelamiento/479-KISTAPUR-Color-R0Ci.jpg',
+  '/assets/parcelamiento/480-KISTAPUR-R1F-color-4C.png',
+  '/assets/parcelamiento/480-KISTAPUR-R1Fiv-color-4E.png',
+  '/assets/parcelamiento/481-Ramannaguda-R03-H-color-version.png',
+  '/assets/parcelamiento/481-Ramannaguda-R03-H.png',
+  '/assets/parcelamiento/483-Varma-120-Acres-R0D-1-Plots-i-Black.png',
+  '/assets/parcelamiento/483-Varma-120-Acres-R0D-1-Plots-i-Color.png',
+  '/assets/parcelamiento/Kompally-Land-CAD-AJ-3-Black-SE-LEE-Tex0.15 pulg.png',
+  '/assets/parcelamiento/Kompally-Land-CAD-AJ-3-Color-SE-LEE-Tex015 pulg.png'
+];
+
 export const parcelamiento: IProject[] = [
   {
     cover: '/assets/parcelamiento/479-KISTAPUR-1B-2',
     title: 'Parcelamiento de Terreno',
     stack: 'AutoCad 2023',
-    description:
-      '',
+    description: '',
     links: [
       {
         name: 'Repository',

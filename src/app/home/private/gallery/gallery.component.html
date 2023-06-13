@@ -1,0 +1,23 @@
+<div class="gallery">
+  <div class="core">
+    <img [src]="images[currentIndex]" class="image" />
+
+    <div class="controls">
+      <button (click)="prev()" [disabled]="currentIndex === 0">&#8592;</button>
+      <button (click)="next()" [disabled]="currentIndex === images.length - 1">
+        &#8594;
+      </button>
+    </div>
+  </div>
+
+  <div class="thumbnails" #thumbnails>
+    <img
+      #thumbnail
+      *ngFor="let image of images; index as i"
+      [src]="image"
+      (click)="select(i)"
+      class="thumbnail"
+      [class.selected]="i === currentIndex"
+    />
+  </div>
+</div>
