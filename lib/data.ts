@@ -65,7 +65,7 @@ export const roles: Project[] = [
 export const projects: Project[] = [
   {
     title: 'Story Teller Visualizer',
-    period: '2024 - present',
+    period: '2026 - present',
     summary:
       'An end-to-end platform that turns web novels into published video episodes. It covers the whole chain — reading and adapting the source, producing narration and visuals, assembling the episode, then scheduling and distributing it across several platforms — as one automated pipeline, with a review layer where a person can step in and correct anything before it ships.',
     stack: [
