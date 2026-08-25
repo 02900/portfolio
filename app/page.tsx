@@ -1,185 +1,118 @@
-import ThemeToggle from './components/ThemeToggle';
-import { GameCard, ProjectCard, RoleCard, SectionHeading, Tag } from './components/Sections';
-import { games, profile, projects, roles, skills } from '@/lib/data';
+import Card from './components/Card';
+import { games, profile, projects, roles } from '@/lib/data';
 
-const nav = [
-  { label: 'Work', href: '#work' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Games', href: '#games' },
-];
+function Section({
+  id,
+  title,
+  children,
+  items,
+}: {
+  id: string;
+  title: string;
+  children: React.ReactNode;
+  items: React.ReactNode;
+}) {
+  return (
+    <section id={id} className="mb-14 scroll-mt-20">
+      <div className="mx-auto mb-8 max-w-[960px] px-4">
+        <h2 className="text-center">{title}</h2>
+        {children}
+      </div>
+      <div className="flex flex-wrap items-start justify-center gap-4 px-4">{items}</div>
+    </section>
+  );
+}
 
 export default function Page() {
   return (
     <>
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:px-4 focus:py-2"
-        style={{ background: 'var(--raised)', color: 'var(--fg)' }}
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:px-3 focus:py-2"
       >
         Skip to content
       </a>
 
-      <header
-        className="sticky top-0 z-40 backdrop-blur"
-        style={{ background: 'color-mix(in oklab, var(--bg) 85%, transparent)' }}
+      <nav
+        className="flex flex-wrap justify-center gap-x-6 gap-y-1 px-4 py-4 text-sm"
+        style={{ borderBottom: '1px solid var(--line)' }}
+        aria-label="Links"
       >
-        <div
-          className="mx-auto flex h-16 max-w-4xl items-center justify-between px-6"
-          style={{ borderBottom: '1px solid var(--line)' }}
-        >
-          <a href="#main" className="font-mono text-sm font-semibold tracking-tight">
-            juan<span style={{ color: 'var(--accent)' }}>.</span>ortiz
+        {profile.links.map((l) => (
+          <a key={l.href} href={l.href} target="_blank" rel="noreferrer">
+            {l.label}
           </a>
-          <div className="flex items-center gap-1">
-            <nav aria-label="Sections" className="hidden sm:flex">
-              {nav.map((n) => (
-                <a
-                  key={n.href}
-                  href={n.href}
-                  className="rounded-md px-3 py-1.5 text-sm transition-colors hover:bg-[var(--accent-soft)]"
-                  style={{ color: 'var(--fg-soft)' }}
-                >
-                  {n.label}
-                </a>
-              ))}
-            </nav>
-            <span className="mx-1 hidden sm:block" />
-            <ThemeToggle />
-          </div>
+        ))}
+      </nav>
+
+      <main id="main" className="mx-auto max-w-[1440px] pt-12">
+        <div className="mx-auto mb-14 max-w-[960px] px-4">
+          <h1 className="text-center">{profile.name}</h1>
+          <p>
+            Welcome. I am a frontend engineer, currently at Compass. I have spent the last seven
+            years building the layer other teams build on — component libraries, design systems and
+            frontend architecture — and lately I have been building AI products on the side.
+          </p>
+          <p>
+            Below you will find the work I am most proud of, and further down the game prototypes I
+            built before moving to the web. I keep adding to this as I go.
+          </p>
         </div>
-      </header>
 
-      <main id="main" className="mx-auto max-w-4xl px-6">
-        {/* Hero */}
-        <section className="rise py-20 sm:py-28">
-          <p
-            className="mb-4 font-mono text-xs uppercase tracking-[0.18em]"
-            style={{ color: 'var(--accent)' }}
-          >
-            {profile.role}
+        <Section
+          id="work"
+          title="Where I've worked"
+          items={roles.map((r) => (
+            <Card key={r.title} item={r} />
+          ))}
+        >
+          <p>
+            I like working close to other engineers, on the pieces everyone else depends on: shared
+            components, the rules a codebase follows, and the seams between applications. Most of my
+            work has been making that layer good enough that nobody has to think about it.
           </p>
-          <h1 className="max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-6xl">
-            {profile.name}
-          </h1>
-          <p
-            className="mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl"
-            style={{ color: 'var(--fg-soft)' }}
-          >
-            {profile.tagline}
+        </Section>
+
+        <Section
+          id="projects"
+          title="Things I've built"
+          items={projects.map((p) => (
+            <Card key={p.title} item={p} />
+          ))}
+        >
+          <p>
+            Side projects are where I get to make every decision myself. The largest is Story Teller
+            Visualizer, a platform that turns web novels into AI-generated video episodes — an
+            editor, a generation pipeline and a publishing flow, all built from scratch.
           </p>
-          <p className="mt-4 max-w-2xl leading-relaxed" style={{ color: 'var(--fg-faint)' }}>
-            {profile.intro}
+        </Section>
+
+        <Section
+          id="games"
+          title="Game development"
+          items={games.map((g) => (
+            <Card key={g.title} item={g} />
+          ))}
+        >
+          <p>
+            I studied computer graphics and spent years building prototypes in Unity. It is where I
+            learned rendering, layout and real-time systems — the same instincts I now apply to
+            interfaces.
           </p>
-
-          <div className="mt-9 flex flex-wrap items-center gap-3">
-            <a
-              href={`mailto:${profile.email}`}
-              className="rounded-lg px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
-              style={{ background: 'var(--accent)' }}
-            >
-              Get in touch
-            </a>
-            {profile.links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-lg border px-4 py-2.5 text-sm font-medium transition-colors hover:bg-[var(--accent-soft)]"
-                style={{ borderColor: 'var(--line)', color: 'var(--fg-soft)' }}
-              >
-                {l.label}
-              </a>
-            ))}
-          </div>
-        </section>
-
-        {/* Work */}
-        <section className="scroll-mt-24 py-16" aria-labelledby="work">
-          <SectionHeading id="work" label="Experience" title="Where I've worked" />
-          <div>
-            {roles.map((r) => (
-              <RoleCard key={r.company} role={r} />
-            ))}
-          </div>
-        </section>
-
-        {/* Projects */}
-        <section className="scroll-mt-24 py-16" aria-labelledby="projects">
-          <SectionHeading id="projects" label="Selected work" title="Things I've built" />
-          <div className="grid gap-5 sm:grid-cols-2">
-            {projects.map((p) => (
-              <ProjectCard key={p.title} project={p} />
-            ))}
-          </div>
-        </section>
-
-        {/* Skills */}
-        <section className="scroll-mt-24 py-16" aria-labelledby="skills">
-          <SectionHeading id="skills" label="Toolkit" title="What I work with" />
-          <dl className="grid gap-x-8 gap-y-7 sm:grid-cols-2">
-            {skills.map((s) => (
-              <div key={s.group}>
-                <dt className="mb-3 text-sm font-semibold tracking-tight">{s.group}</dt>
-                <dd className="flex flex-wrap gap-1.5">
-                  {s.items.map((i) => (
-                    <Tag key={i}>{i}</Tag>
-                  ))}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </section>
-
-        {/* Games */}
-        <section className="scroll-mt-24 py-16" aria-labelledby="games">
-          <SectionHeading id="games" label="Before the web" title="Game development" />
-          <p className="-mt-6 mb-10 max-w-2xl leading-relaxed" style={{ color: 'var(--fg-faint)' }}>
-            I studied computer graphics and spent years building game prototypes in Unity. It is
-            where I learned rendering, layout and real-time systems — the same instincts I now
-            apply to interfaces.
-          </p>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {games.map((g) => (
-              <GameCard key={g.title} game={g} />
-            ))}
-          </div>
-        </section>
+        </Section>
       </main>
 
-      <footer className="mx-auto mt-8 max-w-4xl px-6 pb-16">
-        <div
-          className="flex flex-col gap-4 pt-8 sm:flex-row sm:items-center sm:justify-between"
-          style={{ borderTop: '1px solid var(--line)' }}
-        >
-          <p className="text-sm" style={{ color: 'var(--fg-faint)' }}>
-            Built with Next.js, React and Tailwind CSS.{' '}
-            <a
-              href="https://github.com/02900/portfolio"
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-4 hover:opacity-70"
-            >
-              Source
-            </a>
-            .
-          </p>
-          <div className="flex flex-wrap gap-4">
-            {profile.links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm transition-opacity hover:opacity-70"
-                style={{ color: 'var(--fg-soft)' }}
-              >
-                {l.label}
-              </a>
-            ))}
-          </div>
-        </div>
+      <footer
+        className="mt-4 px-4 py-8 text-center text-xs"
+        style={{ borderTop: '1px solid var(--line)', color: 'var(--ink-faint)' }}
+      >
+        <p className="mb-0">
+          <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          {' · '}
+          <a href="https://github.com/02900/portfolio" target="_blank" rel="noreferrer">
+            Source
+          </a>
+        </p>
       </footer>
     </>
   );
