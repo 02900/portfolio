@@ -53,6 +53,18 @@ export const roles: Project[] = [
   },
 ];
 
+export const clients: Project[] = [
+  {
+    title: 'Brandsfinity Group',
+    period: '2025',
+    summary:
+      'Marketing site for a multichannel distribution company: bilingual, responsive, and built for search — sitemap, canonical URLs and responsive image sets throughout.',
+    stack: ['Astro', 'Tailwind CSS', 'TypeScript', 'i18n', 'SEO'],
+    links: [{ label: 'brandsfinitygroup.com', href: 'https://www.brandsfinitygroup.com/' }],
+    cover: '/assets/frontend/brandsfinity',
+  },
+]
+
 export const projects: Project[] = [
   {
     title: 'Story Teller Visualizer',
@@ -76,7 +88,10 @@ export const projects: Project[] = [
     summary:
       'Multi-currency finance tracking with investments, shared expenses and forecasting, on Supabase Postgres with row-level security.',
     stack: ['Next.js', 'React', 'TypeScript', 'Zustand', 'Supabase'],
-    links: [{ label: 'Demo', href: 'https://finance-wallet-one.vercel.app' }],
+    links: [
+      { label: 'Try the demo', href: 'https://finance-wallet-one.vercel.app/demo' },
+      { label: 'Sign in', href: 'https://finance-wallet-one.vercel.app' },
+    ],
   },
   {
     title: 'Character Creator',
@@ -126,6 +141,24 @@ export const projects: Project[] = [
 
 export const games: Project[] = [
   {
+    title: 'Automatic Navigation Mesh',
+    period: '2019',
+    summary:
+      'Generates a navigation mesh automatically from a map representation, so agents can path through a scene without a hand-authored graph.',
+    stack: ['Unity', 'C#', 'Computational geometry'],
+    links: [{ label: 'Video', href: 'https://www.youtube.com/watch?v=kCVZcDi-71w' }],
+    cover: '/assets/vg/navmesh',
+  },
+  {
+    title: 'Agents Learning to Walk',
+    period: '2019',
+    summary:
+      'Machine-learning agents taught to walk from scratch, rewarded for staying upright and moving forward.',
+    stack: ['Unity', 'C#', 'Reinforcement learning'],
+    links: [{ label: 'Video', href: 'https://www.youtube.com/watch?v=2hgGaV5XXuo' }],
+    cover: '/assets/vg/aiwalk',
+  },
+  {
     title: 'Crowd Simulation',
     period: '2018 - 2019',
     summary: 'Thesis research into crowd simulation models, and an implementation of one.',
@@ -147,7 +180,7 @@ export const games: Project[] = [
     summary:
       'A 2D platformer inspired by petroglyphs, figures engraved in stone thousands of years ago.',
     stack: ['Unity', 'C#'],
-    links: [],
+    links: [{ label: 'Video', href: 'https://www.youtube.com/watch?v=K7vWXWfpdD0' }],
     cover: '/assets/vg/caza-a-casa',
   },
   {
