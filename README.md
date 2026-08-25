@@ -1,27 +1,31 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+Source for [02900.github.io](https://02900.github.io/).
 
-## Development server
+Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS 4, exported as a static site.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Develop
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+pnpm install
+pnpm dev
+```
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+pnpm build   # static export to ./out
+```
 
-## Running unit tests
+## Deploy
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The built `out/` directory is published to the
+[02900.github.io](https://github.com/02900/02900.github.io) repository, which GitHub Pages
+serves from the root of `main`.
 
-## Running end-to-end tests
+```bash
+pnpm build
+# copy ./out into the 02900.github.io checkout, commit and push
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Content lives in a single file: [`lib/data.ts`](lib/data.ts).
