@@ -3,7 +3,7 @@ import type { Project } from '@/lib/data';
 export default function Card({ item }: { item: Project }) {
   return (
     <article
-      className="flex w-full max-w-[18rem] flex-col overflow-hidden rounded-lg transition-colors"
+      className="mb-4 flex w-full break-inside-avoid flex-col overflow-hidden rounded-lg transition-colors"
       style={{ background: 'var(--card)' }}
     >
       {item.cover && (

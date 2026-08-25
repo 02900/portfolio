@@ -19,7 +19,14 @@ function Section({
         <h2 className="text-center">{title}</h2>
         {children}
       </div>
-      <div className="flex flex-wrap items-start justify-center gap-4 px-4">{items}</div>
+      {/*
+        Multi-column rather than grid: the number of columns follows the
+        available width on its own, and cards of different heights pack
+        without leaving holes. CSS grid cannot do this yet — `masonry` is
+        still not shippable — and a flex-wrap row leaves a gap under every
+        card shorter than the tallest one in its row.
+      */}
+      <div className="mx-auto max-w-[1200px] columns-[17rem] gap-4 px-4">{items}</div>
     </section>
   );
 }
