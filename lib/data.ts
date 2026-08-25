@@ -86,6 +86,7 @@ export const projects: Project[] = [
       'Multi-currency finance tracking with investments, shared expenses and forecasting, on Supabase Postgres with row-level security.',
     stack: ['Next.js', 'React', 'TypeScript', 'Zustand', 'Supabase'],
     links: [{ label: 'Try the demo', href: 'https://finance-wallet-one.vercel.app/demo' }],
+    cover: '/assets/frontend/finance-wallet',
   },
   {
     title: 'Character Creator',
