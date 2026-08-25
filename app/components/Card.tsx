@@ -23,7 +23,7 @@ export default function Card({ item }: { item: Project }) {
           </picture>
           <span
             className="absolute right-0 top-0 rounded-bl px-1.5 py-0.5 text-xs"
-            style={{ background: 'var(--badge)' }}
+            style={{ background: 'var(--badge)', color: 'var(--badge-ink)' }}
           >
             {item.period}
           </span>

@@ -58,9 +58,17 @@ export const projects: Project[] = [
     title: 'Story Teller Visualizer',
     period: '2024 - present',
     summary:
-      'Turns web novels into AI-generated video episodes. A Next.js app of 55 pages with a hand-built non-linear video editor: multi-track timeline, waveforms decoded in the browser, and word-by-word karaoke subtitles.',
-    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'SSE'],
-    links: [{ label: 'Watch', href: 'https://www.youtube.com/@IsekaiWorlds-ES' }],
+      'A one-person studio that turns a web novel chapter into a published episode. It runs unattended from chapter to upload, keeps a scheduling calendar reconciled against what each platform actually did, survives restarts without losing work in flight, and picks the cheapest model that still meets the quality bar by measuring cost against results. Everything is mine: the product, the pipeline, the render services, the editor, the publishing tooling and the box it runs on.',
+    stack: [
+      'Product',
+      'Full-stack',
+      'AI pipeline',
+      'Media rendering',
+      'Distributed jobs',
+      'Publishing',
+      'Infrastructure',
+    ],
+    links: [{ label: 'Watch the channel', href: 'https://www.youtube.com/@IsekaiWorlds-ES' }],
   },
   {
     title: 'Personal Finance Wallet',

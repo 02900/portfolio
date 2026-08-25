@@ -1,4 +1,5 @@
 import Card from './components/Card';
+import ThemeToggle from './components/ThemeToggle';
 import { games, profile, projects, roles } from '@/lib/data';
 
 function Section({
@@ -43,6 +44,7 @@ export default function Page() {
             {l.label}
           </a>
         ))}
+        <ThemeToggle />
       </nav>
 
       <main id="main" className="mx-auto max-w-[1440px] pt-12">

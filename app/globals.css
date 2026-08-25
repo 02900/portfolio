@@ -1,30 +1,61 @@
 @import 'tailwindcss';
 
 /*
-  Deliberately plain: monospace everywhere, a white page, pale blue cards.
-  This is the look the site has always had — the styling here only tidies
-  spacing, alignment and hover states.
+  Deliberately plain: monospace everywhere, pale cards, centred headings.
+  The dark palette mirrors the light one rather than introducing a new look —
+  same ink/card/badge roles, inverted.
 */
 
 :root {
+  --bg: #ffffff;
   --ink: #1a1a1a;
   --ink-soft: #4a4a4a;
   --ink-faint: #767676;
   --card: #ecf4ff;
-  --card-hover: #e2eeff;
-  --badge: azure;
+  --badge: #f0ffff;
+  --badge-ink: #1a1a1a;
   --line: #dfe6f2;
   --link: #1e50a2;
+}
+
+/* System preference, unless the visitor has explicitly chosen light. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #10131a;
+    --ink: #e8ecf3;
+    --ink-soft: #b3bccb;
+    --ink-faint: #8792a3;
+    --card: #191f2b;
+    --badge: #232b3a;
+    --badge-ink: #e8ecf3;
+    --line: #2a3242;
+    --link: #7fb0ff;
+  }
+}
+
+/* Explicit choice always wins, in both directions. */
+:root[data-theme='dark'] {
+  --bg: #10131a;
+  --ink: #e8ecf3;
+  --ink-soft: #b3bccb;
+  --ink-faint: #8792a3;
+  --card: #191f2b;
+  --badge: #232b3a;
+  --badge-ink: #e8ecf3;
+  --line: #2a3242;
+  --link: #7fb0ff;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
+  background: var(--bg);
+  color-scheme: light dark;
 }
 
 body {
   margin: 0;
-  background: #fff;
+  background: var(--bg);
   color: var(--ink);
   font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
   font-size: 15px;
@@ -53,6 +84,11 @@ p {
 
 a {
   color: var(--link);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
