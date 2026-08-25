@@ -42,7 +42,7 @@ export default function Page() {
       </a>
 
       <nav
-        className="flex flex-wrap justify-center gap-x-6 gap-y-1 px-4 py-4 text-sm"
+        className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4 py-4 text-sm"
         style={{ borderBottom: '1px solid var(--line)' }}
         aria-label="Links"
       >
