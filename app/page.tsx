@@ -1,6 +1,6 @@
 import Card from './components/Card';
 import ThemeToggle from './components/ThemeToggle';
-import { clients, games, profile, projects, roles } from '@/lib/data';
+import { games, profile, projects, roles } from '@/lib/data';
 
 function Section({
   id,
@@ -78,20 +78,8 @@ export default function Page() {
           <p>
             I like working close to other engineers, on the pieces everyone else depends on: shared
             components, the rules a codebase follows, and the seams between applications. Most of my
-            work has been making that layer good enough that nobody has to think about it.
-          </p>
-        </Section>
-
-        <Section
-          id="clients"
-          title="Client work"
-          items={clients.map((c) => (
-            <Card key={c.title} item={c} />
-          ))}
-        >
-          <p>
-            Work I took on directly for a client, start to finish: the design, the build and
-            everything around it — copy in two languages, search setup and deployment.
+            work has been making that layer good enough that nobody has to think about it — and
+            every so often, taking something on directly for a client, start to finish.
           </p>
         </Section>
 

@@ -43,6 +43,15 @@ export const roles: Project[] = [
     cover: '/assets/frontend/dd360',
   },
   {
+    title: 'Brandsfinity Group',
+    period: '2025 · client work',
+    summary:
+      'Marketing site for a multichannel distribution company, taken on directly and end to end: bilingual copy, responsive build, search setup and deployment.',
+    stack: ['Astro', 'Tailwind CSS', 'TypeScript', 'i18n', 'SEO'],
+    links: [{ label: 'brandsfinitygroup.com', href: 'https://www.brandsfinitygroup.com/' }],
+    cover: '/assets/frontend/brandsfinity',
+  },
+  {
     title: 'Kavak',
     period: '2018 - 2023',
     summary:
@@ -52,18 +61,6 @@ export const roles: Project[] = [
     cover: '/assets/frontend/kavak',
   },
 ];
-
-export const clients: Project[] = [
-  {
-    title: 'Brandsfinity Group',
-    period: '2025',
-    summary:
-      'Marketing site for a multichannel distribution company: bilingual, responsive, and built for search — sitemap, canonical URLs and responsive image sets throughout.',
-    stack: ['Astro', 'Tailwind CSS', 'TypeScript', 'i18n', 'SEO'],
-    links: [{ label: 'brandsfinitygroup.com', href: 'https://www.brandsfinitygroup.com/' }],
-    cover: '/assets/frontend/brandsfinity',
-  },
-]
 
 export const projects: Project[] = [
   {
