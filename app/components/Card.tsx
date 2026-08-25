@@ -13,8 +13,8 @@ export default function Card({ item }: { item: Project }) {
             <img
               src={`${item.cover}.jpg`}
               alt={item.title}
-              width={320}
-              height={180}
+              width={640}
+              height={360}
               loading="lazy"
               decoding="async"
               draggable={false}

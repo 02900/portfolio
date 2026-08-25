@@ -28,9 +28,10 @@ export const roles: Project[] = [
     title: 'Compass',
     period: '2026 - present',
     summary:
-      'Transaction Management at the largest residential real estate brokerage in the U.S. Work at the seams between applications: a cross-app bridge across an authentication boundary, shipped behind a feature flag, and the ongoing React 16 to 18 upgrade.',
+      'Transaction Management at the largest residential real estate brokerage in the U.S. Work at the seams between applications: extending the existing cross-app infrastructure to carry data across an authentication boundary, behind a feature flag, plus the ongoing React 16 to 18 upgrade.',
     stack: ['React', 'TypeScript', 'Design Systems'],
     links: [{ label: 'compass.com', href: 'https://www.compass.com/' }],
+    cover: '/assets/frontend/compass',
   },
   {
     title: 'DD360',
@@ -39,6 +40,7 @@ export const roles: Project[] = [
       'Architected a 70+ component design system on Radix and CVA, with jscodeshift codemods that cut breaking-change migrations from days to minutes. Also built a visual website builder and a platform of five micro-frontends.',
     stack: ['Next.js', 'React', 'TypeScript', 'Radix UI', 'Turborepo'],
     links: [{ label: 'dd360.mx', href: 'https://dd360.mx/' }],
+    cover: '/assets/frontend/dd360',
   },
   {
     title: 'Kavak',
@@ -85,26 +87,7 @@ export const projects: Project[] = [
     summary:
       'A real-time multiplayer word game with Spanish dictionary validation, two game engines behind a shared interface and state synced over WebSockets.',
     stack: ['Next.js', 'TypeScript', 'Socket.IO', 'Playwright'],
-    links: [],
-  },
-  {
-    title: 'Clay on the PlayStation 3',
-    period: '2026',
-    summary:
-      'Ported an immediate-mode UI layout engine to the PS3, including directional gamepad focus navigation. Layout and focus management with no DOM underneath.',
-    stack: ['C', 'PSL1GHT', 'RSXGL'],
-    links: [{ label: 'Repository', href: 'https://github.com/02900/clay-ps3' }],
-  },
-  {
-    title: 'PS3 Homebrew Toolchain',
-    period: '2026',
-    summary:
-      'A Dockerized cross-compiler toolchain with three renderer backends, template repositories and CI, plus the platform patterns packaged as reusable Claude Code skills.',
-    stack: ['C', 'C++', 'Docker'],
-    links: [
-      { label: 'Skills', href: 'https://github.com/02900/ps3-homebrew-skills' },
-      { label: 'Toolchain', href: 'https://github.com/02900/ps3-toolchain' },
-    ],
+    links: [{ label: 'Repository', href: 'https://github.com/02900/boggle' }],
   },
   {
     title: 'Web Metadata Scraper',
@@ -156,7 +139,7 @@ export const games: Project[] = [
     summary:
       'A 2D platformer inspired by petroglyphs, figures engraved in stone thousands of years ago.',
     stack: ['Unity', 'C#'],
-    links: [{ label: 'Video', href: 'https://www.youtube.com/watch?v=K7vWXWfpdD0' }],
+    links: [],
     cover: '/assets/vg/caza-a-casa',
   },
   {
@@ -180,7 +163,7 @@ export const games: Project[] = [
     period: '2017',
     summary: 'A multiplayer third-person shooter prototype.',
     stack: ['Unity', 'C#'],
-    links: [],
+    links: [{ label: 'Video', href: 'https://www.youtube.com/watch?v=3qoVqg6spMU' }],
     cover: '/assets/vg/tps',
   },
 ];
