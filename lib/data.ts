@@ -111,7 +111,7 @@ export const projects: Project[] = [
     summary:
       'A deck builder exploring reactive programming patterns and Angular architecture, with NgRx state and optimized change detection.',
     stack: ['Angular', 'RxJS', 'NgRx'],
-    links: [{ label: 'Demo', href: 'https://02900.github.io/ygo-deck-builder/' }],
+    links: [{ label: 'Try it', href: 'https://02900.github.io/ygo-deck-builder/' }],
     cover: '/assets/frontend/deck-builder',
   },
 ];
