@@ -91,9 +91,9 @@ export default function Page() {
           ))}
         >
           <p>
-            Side projects are where I get to make every decision myself. The largest is Story Teller
-            Visualizer, a platform that turns web novels into AI-generated video episodes — an
-            editor, a generation pipeline and a publishing flow, all built from scratch.
+            Things I build outside work, usually because I want to find out whether they can be
+            built at all. The largest is Story Teller Visualizer, a platform that takes a web novel
+            and returns a finished, published video episode.
           </p>
         </Section>
 

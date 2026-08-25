@@ -67,7 +67,7 @@ export const projects: Project[] = [
     title: 'Story Teller Visualizer',
     period: '2024 - present',
     summary:
-      'A one-person studio that turns a web novel chapter into a published episode. It runs unattended from chapter to upload, keeps a scheduling calendar reconciled against what each platform actually did, survives restarts without losing work in flight, and picks the cheapest model that still meets the quality bar by measuring cost against results. Everything is mine: the product, the pipeline, the render services, the editor, the publishing tooling and the box it runs on.',
+      'An end-to-end platform that turns web novels into published video episodes. It covers the whole chain — reading and adapting the source, producing narration and visuals, assembling the episode, then scheduling and distributing it across several platforms — as one automated pipeline, with a review layer where a person can step in and correct anything before it ships.',
     stack: [
       'Product',
       'Full-stack',
@@ -85,10 +85,7 @@ export const projects: Project[] = [
     summary:
       'Multi-currency finance tracking with investments, shared expenses and forecasting, on Supabase Postgres with row-level security.',
     stack: ['Next.js', 'React', 'TypeScript', 'Zustand', 'Supabase'],
-    links: [
-      { label: 'Try the demo', href: 'https://finance-wallet-one.vercel.app/demo' },
-      { label: 'Sign in', href: 'https://finance-wallet-one.vercel.app' },
-    ],
+    links: [{ label: 'Try the demo', href: 'https://finance-wallet-one.vercel.app/demo' }],
   },
   {
     title: 'Character Creator',
