@@ -28,8 +28,8 @@ export const roles: Project[] = [
     title: 'Compass',
     period: '2026 - present',
     summary:
-      'Transaction Management at the largest residential real estate brokerage in the U.S. Work at the seams between applications: extending the existing cross-app infrastructure to carry data across an authentication boundary, behind a feature flag, plus the ongoing React 16 to 18 upgrade.',
-    stack: ['React', 'TypeScript', 'Design Systems'],
+      'Transaction Management at the largest residential real estate brokerage in the U.S. Raising test coverage with unit and end-to-end suites, moving React components from JavaScript to TypeScript, and shipping product changes that span several established internal libraries. The architecture is inherited and not what anyone would choose today; the work is adding to it without making it worse.',
+    stack: ['React', 'TypeScript', 'Testing', 'Legacy migration'],
     links: [{ label: 'compass.com', href: 'https://www.compass.com/' }],
     cover: '/assets/frontend/compass',
   },
@@ -106,6 +106,7 @@ export const projects: Project[] = [
       'A real-time multiplayer word game with Spanish dictionary validation, two game engines behind a shared interface and state synced over WebSockets.',
     stack: ['Next.js', 'TypeScript', 'Socket.IO', 'Playwright'],
     links: [{ label: 'Repository', href: 'https://github.com/02900/boggle' }],
+    cover: '/assets/frontend/boggle',
   },
   {
     title: 'Web Metadata Scraper',
